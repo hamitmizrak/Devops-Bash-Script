@@ -1,3 +1,8 @@
+
+sudo apt-get install curl 
+sudo su - 
+curl https://github.com/hamitmizrak/Devops-Bash-Script/blob/main/_8_sonaqube | bash
+
 # Docker Host (Elasticsearch)
 docker ps 
 
