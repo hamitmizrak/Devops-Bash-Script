@@ -17,6 +17,9 @@ CHMOD="Dosya izinleri ver"
 # Updated
 sleep 2
 echo -e "\n### ${CHMOD} ###"
+read -p "Dosyalara izin vermek istiyor musunuz  E/H ? " chmodResult
+if [[ $chmodResult == "E" || $chmodResult == "e"  ]]
+then
    echo -e "Yetkilendirme Başlandı... "  
    sudo chmod +x _1_common.sh
    sudo chmod +x _2_git.sh
@@ -28,19 +31,29 @@ echo -e "\n### ${CHMOD} ###"
    sudo chmod +x _8_SonarQube.sh
    sudo chmod +x _14_AllVersion.sh
    echo -e "Çalıştırmak ./_1_common.sh"  
+else
+     echo -e "apt-get Update List Güncelleme Yapılmadı!!!\n "   
+fi
 
 # Updated
 sleep 2
 echo -e "\n### ${UPDATED} ###"
-
+read -p "Güncelleme istiyor musunuz  E/H ? " updatedResult
+if [[ $updatedResult == "E" || $updatedResult == "e"  ]]
+then
     echo -e "Güncelleme Başlandı... "  
     sudo apt-get update && sudo apt-get upgrade -y
+else
+     echo -e "apt-get Update List Güncelleme Yapılmadı!!!\n "   
+fi
 
 
 # Common
 sleep 2
 echo -e "\n### ${COMMONINFORMATION} ###"
-
+read -p "Genel Bilgiler istiyor musunuz  E/H ? " commonResult
+if [[ $commonResult == "E" || $commonResult == "e"  ]]
+then
     echo -e "Genel Bilgiler Başlandı... "  
         sleep 1
     echo -e "Ben Kimim ... "  
@@ -65,13 +78,16 @@ echo -e "\n### ${COMMONINFORMATION} ###"
         sleep 1
     echo -e "Ram ... " 
     sudo free -m
-
-
+else
+     echo -e "Genel Bilgiler Gösterilmediı!!!\n "    
+fi
 
 # Yükleme
 sleep 2
 echo -e "\n### ${UPDATED} ###"
-
+read -p "Yükleme istiyor musunuz  E/H ? " installingResult
+if [[ $installingResult == "E" || $installingResult == "e"  ]]
+then
     echo -e "Yükleme Başlandı... "
     pwd 
     sudo apt-get update
@@ -86,12 +102,17 @@ echo -e "\n### ${UPDATED} ###"
     sudo apt install nodejs -y
     node -v
     npm -v
-
+else
+     echo -e "Yükleme Yapılmadı!!!\n "   
+fi
 
 
 # system variable
 sleep 2
 echo -e "\n######  Port Yükleme ######"
+read -p  "Port aktif etmek istiyor musunuz? E / H " portedResult
+if [[ $portedResult == "E"  ||  $portedResult == "e" ]]
+then
 	echo   -e "\n######"  $PORT "######"
 	netstat -nlptu
 	sudo ufw allow 22
@@ -106,18 +127,24 @@ echo -e "\n######  Port Yükleme ######"
 	sudo ufw allow 2222
 	sudo ufw allow 3333
 	sudo ufw allow 4444
-
+else 
+    echo -e "Genel Güncelleme Yapılmadı!!!\n "    
+fi 
 
 
 # Temizlik
 sleep 2
 echo -e "\n######  Cache Temizleme  ######"
-
+read -p  "Cache Temizleme istiyor musunuz? E / H " cleanResult
+if [[ $cleanResult == "E"  ||  $cleanResult == "e" ]]
+then
 	echo   -e "\n######"  $CLEANER "######"
 	echo -e "Temizlik Başlandı... "  
     sudo apt-get clean
     sudo apt-get autoremove -y
-
+else 
+    echo -e "Temizlik Yapılmadı!!!\n "    
+fi
 
 
 sleep 2
