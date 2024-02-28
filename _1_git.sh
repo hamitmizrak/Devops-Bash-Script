@@ -16,8 +16,8 @@ COMMONINFORMATION=" Genel Bilgiler"
 sleep 2
 echo -e "\n### ${UPDATED} ###"
 
-    echo -e "Güncelleme Başlandı... "  
-    sudo apt-get update && sudo apt-get upgrade -y
+echo -e "Güncelleme Başlandı... "  
+sudo apt-get update 
 
 
 
@@ -25,15 +25,15 @@ echo -e "\n### ${UPDATED} ###"
 sleep 2
 echo -e "\n### ${COMMONINFORMATION} ###"
 
-    echo -e "Genel Bilgiler Başlandı... "  
-    echo -e "Ben Kimim ... "  
-    sudo whoami
-    echo -e "IP ... " 
-    sudo ifconfig
-    echo -e "Portlar ... " 
-    sudo netstat -nlptu
-    echo -e "Ram ... " 
-    sudo free -m
+echo -e "Genel Bilgiler Başlandı... "  
+echo -e "Ben Kimim ... "  
+sudo whoami
+echo -e "IP ... " 
+sudo ifconfig
+echo -e "Portlar ... " 
+sudo netstat -nlptu
+echo -e "Ram ... " 
+sudo free -m
 
 
 # Yükleme
@@ -55,10 +55,10 @@ sudo apt install –f
 sleep 2
 echo -e "\n######  Cache Temizleme  ######"
 
-	echo   -e "\n######"  $CLEANER "######"
-	echo -e "Temizlik Başlandı... "  
-    sudo apt-get clean
-    sudo apt-get autoremove -y
+echo   -e "\n######"  $CLEANER "######"
+echo -e "Temizlik Başlandı... "  
+sudo apt-get clean
+sudo apt-get autoremove -y
 
 
 sleep 2
