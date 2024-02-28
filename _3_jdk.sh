@@ -23,6 +23,7 @@ echo -e "Genel Bilgiler Başlandı... "
 echo -e "Ben Kimim ... "  
 sudo whoami
 echo -e "IP ... " 
+apt install net-tools
 sudo ifconfig
 echo -e "Portlar ... " 
 sudo netstat -nlptu
