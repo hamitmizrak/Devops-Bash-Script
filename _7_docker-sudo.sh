@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # create docker group
 sudo groupadd docker
 
