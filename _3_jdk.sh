@@ -14,22 +14,15 @@ COMMONINFORMATION=" Genel Bilgiler"
 # Updated
 sleep 2
 echo -e "\n### ${UPDATED} ###"
-read -p "Güncelleme istiyor musunuz  E/H ? " updatedResult
-if [[ $updatedResult == "E" || $updatedResult == "e"  ]]
-then
+
     echo -e "Güncelleme Başlandı... "  
     sudo apt-get update && sudo apt-get upgrade -y
-else
-     echo -e "apt-get Update List Güncelleme Yapılmadı!!!\n "   
-fi
 
 
 # Common
 sleep 2
 echo -e "\n### ${COMMONINFORMATION} ###"
-read -p "Genel Bilgiler istiyor musunuz  E/H ? " commonResult
-if [[ $commonResult == "E" || $commonResult == "e"  ]]
-then
+
     echo -e "Genel Bilgiler Başlandı... "  
     echo -e "Ben Kimim ... "  
     sudo whoami
@@ -39,17 +32,13 @@ then
     sudo netstat -nlptu
     echo -e "Ram ... " 
     sudo free -m
-else
-     echo -e "apt-get Update List Güncelleme Yapılmadı!!!\n "   
-fi
+
 
 
 # JAVA
 sleep 2
 echo   -e "\n###### JAVA ######"
-read -p "JAVA Yükleme istiyor musunuz? E / H ? " installingResult
-if [[ $installingResult == "E"  ||  $installingResult == "e" ]]
-then
+
 	# Java
 	echo   -e "\n###### JAVA"  $INSTALL "######"
 	echo   -e "\n######"  $WHICH "######"
@@ -81,17 +70,14 @@ then
      sleep 1
      echo -e "Bağımlılıklar Yükleniyor"
      sudo apt install –f 
-else 
-    echo -e "Java Güncelleme Yapılmadı!!!\n "    
-fi 
+
 
 
 #  Silme
 sleep 2
 echo -e "\n### ${DELETED} ###"
 echo -e "\nJava'yı Silmek istiyor musunuz ? E/H " deletedResult
-if [[ $deletedResult == "E" || $deletedResult == "e"  ]]
-then
+
     echo -e "Temizlik Başlandı... "
     sudo update-alternatives --remove "java" "/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java"    
     sudo update-alternatives --remove "javac" "/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/javac"    
@@ -99,24 +85,17 @@ then
     sudo rm -r /usr/lib/jvm/
     sudo apt-get clean
     sudo apt-get autoremove -y
-else
-     echo -e "Java Silme Yapılmadı!!!\n "   
-fi
+
 
 # Temizlik
 sleep 2
 echo -e "\n######  Cache Temizleme  ######"
-read -p  "Cache Temizleme istiyor musunuz? E / H " cleanResult
-if [[ $cleanResult == "E"  ||  $cleanResult == "e" ]]
-then
+
 	echo   -e "\n######"  $CLEANER "######"
 	echo -e "Temizlik Başlandı... "  
     sudo apt-get clean
     sudo apt-get autoremove -y
     java --version
-else 
-    echo -e "Temizlik Yapılmadı!!!\n "    
-fi
 
 
 sleep 2
