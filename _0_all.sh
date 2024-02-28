@@ -16,15 +16,14 @@ CHMOD="Dosya izinleri ver"
 sleep 2
 echo -e "\n### ${CHMOD} ###"
 echo -e "Yetkilendirme Başlandı... "  
-sudo chmod +x _1_common.sh
-sudo chmod +x _2_git.sh
-sudo chmod +x _3_vs_code.sh
-sudo chmod +x _4_JDK.sh
-sudo chmod +x _5_Maven.sh
-sudo chmod +x _6_Docker.sh
-sudo chmod +x _7_Postgresql.sh
-sudo chmod +x _8_SonarQube.sh
-sudo chmod +x _14_AllVersion.sh
+sudo chmod +x _1_git.sh
+sudo chmod +x _2_vscode.sh
+sudo chmod +x _3_jdk.sh
+sudo chmod +x _4_Maven.sh
+sudo chmod +x _5_docker.sh
+sudo chmod +x _6_docker-compose-version.sh
+sudo chmod +x _7_docker-sudo.sh
+sudo chmod +x _9_sonarqube_config.sh
 echo -e "Çalıştırmak ./_1_common.sh"  
 
 # Updated
