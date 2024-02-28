@@ -19,7 +19,7 @@ docker version
 docker run hello-world
 sleep 1
 echo -e "Bağımlılıklar Yükleniyor"
-sudo apt install –f 
+#sudo apt install –f  
 
 echo -e "Docker Pulling ... "  
 sudo docker pull nginx

@@ -11,20 +11,16 @@ WHICH="Nerede ?"
 COMMONINFORMATION=" Genel Bilgiler"
 
 # System Variable
-
 # Updated
 sleep 2
 echo -e "\n### ${UPDATED} ###"
-
 echo -e "Güncelleme Başlandı... "  
 # sudo apt-get update && sudo  apt-get upgrade -y
 sudo apt-get update
 
-
 # Common
 sleep 2
 echo -e "\n### ${COMMONINFORMATION} ###"
-
 echo -e "Genel Bilgiler Başlandı... "  
 echo -e "Ben Kimim ... "  
 sudo whoami
@@ -37,7 +33,6 @@ sudo free -m
 
 # Maven deleted
 sleep 2
-
 echo -e "Güncelleme Başlandı... "  
 echo -e "Temizlik Başlandı... "
 sudo apt-get clean
@@ -47,11 +42,9 @@ sudo apt-get purge maven
 sudo rm -f apache-maven-3.6.3-bin.tar.gz
 sudo apt-get update 
 
-
 # MAVEN
 sleep 2
 echo   -e "\n###### MAVEN ######"
-
 # Java
 echo   -e "\n###### MAVEN"  $INSTALL "######"
 echo   -e "\n######"  $WHICH "######"
@@ -63,7 +56,6 @@ echo   -e "\n###### JAVA VERSION ######"
 java --version
 javac --version
 #sudo su
-
 sudo apt install maven
 sleep 1
 echo -e "Bağımlılıklar Yükleniyor"
@@ -91,12 +83,9 @@ mvn -version
 # Temizlik
 sleep 2
 echo -e "\n######  Cache Temizleme  ######"
-
 echo   -e "\n######"  $CLEANER "######"
 echo -e "Temizlik Başlandı... "  
 sudo apt-get clean
 sudo apt-get autoremove -y
-
-
 sleep 2
 echo -e "\n######  BİTTİ ######"

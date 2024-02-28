@@ -12,8 +12,6 @@ COMMONINFORMATION=" Genel Bilgiler"
 CHMOD="Dosya izinleri ver"
 
 # System Variable
-
-
 # Updated
 sleep 2
 echo -e "\n### ${CHMOD} ###"
@@ -36,7 +34,6 @@ echo -e "\n### ${UPDATED} ###"
 echo -e "Güncelleme Başlandı... "  
 #sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get update
-
 
 # Common
 sleep 2
@@ -68,11 +65,9 @@ echo -e "Ram ... "
 sudo free -m
 
 
-
 # Yükleme
 sleep 2
 echo -e "\n### ${UPDATED} ###"
-
 echo -e "Yükleme Başlandı... "
 pwd 
 sudo apt-get update
@@ -87,8 +82,6 @@ sudo apt-get install nginx -y
 sudo apt install nodejs -y
 node -v
 npm -v
-
-
 
 # system variable
 sleep 2
@@ -108,18 +101,13 @@ sudo ufw allow 2222
 sudo ufw allow 3333
 sudo ufw allow 4444
 
-
-
 # Temizlik
 sleep 2
 echo -e "\n######  Cache Temizleme  ######"
-
 echo   -e "\n######"  $CLEANER "######"
 echo -e "Temizlik Başlandı... "  
 sudo apt-get clean
 sudo apt-get autoremove -y
-
-
 
 sleep 2
 echo -e "\n######  BİTTİ ######"
